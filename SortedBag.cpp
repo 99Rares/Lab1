@@ -195,7 +195,7 @@ int SortedBag::nrOccurrences(TComp elem) const {/*
 			int m = (left + right) / 2;
 
 			if (this->S_bag[m].first == elem) {
-				return S_bag[m].second;
+				return S_bag[m].second;//return nrOccurrences
 			}
 			if (this->S_bag[m].first < elem) {
 				left = m + 1;
@@ -210,7 +210,7 @@ int SortedBag::nrOccurrences(TComp elem) const {/*
 			int m = (left + right) / 2;
 
 			if (this->S_bag[m].first == elem) {
-				return S_bag[m].second;
+				return S_bag[m].second;//return nrOccurrences
 			}
 			if (this->S_bag[m].first < elem) {
 				right = m - 1;

@@ -3,13 +3,17 @@
 #include <exception>
 
 using namespace std;
-
+/*
+	Die Komplexitaten hier sind alle O(1)
+*/
 SortedBagIterator::SortedBagIterator(const SortedBag& b) : bag(b) {
-	//TODO - Implementation
+	//initialisiert den Index des Iterators mit 0
 	this->i = 0;
 }
 
 TComp SortedBagIterator::getCurrent() {
+	//Wenn valid, die Funktion liefert das Element auf der gegebenen Position
+	//sonst NULL
 	if (valid() == false) {
 		exception f;
 		throw f;
@@ -20,7 +24,7 @@ TComp SortedBagIterator::getCurrent() {
 }
 
 bool SortedBagIterator::valid() {
-	//TODO - Implementation
+	//uberpruft ob der index grosser als 0 ist und ob er kleiner als die Lenge des Bags ist
 	if (this->i < this->bag.len && this->i >= 0) {
 		return true;
 	}
@@ -28,7 +32,7 @@ bool SortedBagIterator::valid() {
 }
 
 void SortedBagIterator::next() {
-	//TODO - Implementation
+	//Falls S_bag existiert und die Position valid() ist, dann zeigt der Iterator auf die nechste Position
 	if (this->bag.len == 0) {
 		exception f;
 		throw f;
@@ -45,7 +49,7 @@ void SortedBagIterator::next() {
 }
 
 void SortedBagIterator::first() {
-	//TODO - Implementation
+	//tut den Index wieder auf die erste Position
 	this->i = 0;
 }
 
